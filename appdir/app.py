@@ -13,14 +13,14 @@ class Todo(db.Model):
 
 @app.route("/post", methods=["GET", "POST"])
 def post():
-    post_list = Post.query.all()
+    post_list = post.query.all()
     return render_template("index.html", post_list = post_list)
 
 @app.route("/add", methods=["POST"])
 def add():
     store_title = request.form.get("store_title")
     post = request.form.get("post")
-    new_post = Post(title = title)
+    new_post = Post(title = store_title)
     db.session.add(new_post)
     db.session.commit()
     return redirect(url_for("post"))
