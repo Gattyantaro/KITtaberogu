@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    text-align: center;
+    font-size: 25px;
+}
+
+.second{
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.second-contents{
+    background-color: #eee;     /* 背景色指定 */
+    padding:  10px;             /* 余白指定 */
+}
+
+.second-contents{
+    padding: 10px;      /* 文字色 */
+    margin:  10px;              /* 外側の余白 */
+    border-radius:  5px;        /* 角丸指定 */
+}
+
+.second {
+    max-width: 300px;
+    max-height: 300px;
+}
