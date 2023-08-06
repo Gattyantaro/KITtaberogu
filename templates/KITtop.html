@@ -7,17 +7,23 @@
 </head>
 <body>
     <header>
-        <p>KITTABEROGU</p>
-        <p>検索</p>
+        <p>KIT食べログ</p>
     </header>
     <div class="profile-contents">
         <div class="first-contents">
             <p>食べログの投稿を閲覧</p>
-            
+            {% for dbtake in dbtakes %}
+            <article>
+                <P>店名:{{dbtake.title}}</P>
+                <p>感想:{{dbtake.content}}</p>
+            </article>
+            {% endfor %}
         </div>
         <div class="second-contents">
-            <h1>食べログを投稿する</h1>
-            <a href="index.html">こちらから</a>
+            <a href="http://127.0.0.1:5000/post">食べログを投稿する</a>
+            <form method="POST" action="/delete">
+                <button type = "submit">食べログの投稿削除</button>
+            </form>
         </div>
         <div class="third-contents">
             <h1>利用シーンから探す</h1>
