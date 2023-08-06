@@ -7,13 +7,16 @@ db = SQLAlchemy(app)
 
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    store_title = db.Column(db.String(50) , unique = True)
-    post = db.Column(db.String(200) , unique = True)
+    title = db.Column(db.String(50) , unique = True)
+    todo = db.Column(db.String(200) , unique = True)
 
+@app.route("/", methods=["GET"])
+def index():
+    return render_template("KITtop.html")
 
 @app.route("/post", methods=["GET", "POST"])
 def post():
-    post_list = post.query.all()
+    post_list = todo.query.all()
     return render_template("index.html", post_list = post_list)
 
 @app.route("/add", methods=["POST"])

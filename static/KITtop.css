@@ -6,24 +6,24 @@
     font-size: 25px;
 }
 
-.second{
+.third{
     display: flex;
     padding-top: 40px;
     padding-bottom: 10px;
 }
 
-.second-contents{
+.third-contents{
     background-color: #eee;     /* 背景色指定 */
     padding:  10px;             /* 余白指定 */
 }
 
-.second-contents{
+.third-contents{
     padding: 10px;      /* 文字色 */
     margin:  10px;              /* 外側の余白 */
     border-radius:  5px;        /* 角丸指定 */
 }
 
-.second {
+.third {
     max-width: 300px;
     max-height: 300px;
 }
