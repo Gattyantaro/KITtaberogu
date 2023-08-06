@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post locate</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Post App</h1>
+        <form method="POST" action="/add">
+            <input type="text" name="store_title" id="store_title" placeholder="店の名前を入力" required>
+            <input type="text" name="post" id="post" placeholder="感想を入力" required>
+            <button type="submit">Add</button>
+        </form>
+        <ul>
+            {% for post in post_list %}
+            <li>
+                {{ post.title }}
+                <form method="POST" action="/delete/{{ post.id }}">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
